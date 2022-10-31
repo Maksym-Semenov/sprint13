@@ -20,11 +20,21 @@ namespace Tasks.Controllers
         }
         public IActionResult ShoppingList()
         {
-            return View();
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+            dict.Add("Milk", 2);
+            dict.Add("Bread", 2);
+            dict.Add("Cake", 1);
+            dict.Add("Ice Cream", 5);
+            dict.Add("Cola", 10);
+            return View(dict);
         }
         public IActionResult ShoppingCart()
         {
             return View();
+        }
+        public IActionResult TimeToBuy()
+        {
+            return PartialView("_TimeToBuy");
         }
     }
 }

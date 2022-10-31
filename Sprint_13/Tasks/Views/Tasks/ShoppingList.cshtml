@@ -1,0 +1,12 @@
+﻿@model Dictionary<string, int>
+<h3>Our Shopping list</h3>
+<table style="border: 1px solid black;">
+    @foreach (var item in Model)
+    {
+        <tr style="border: 1px solid black;">
+            <th style="border: 1px solid black;">@item.Key</th>
+            <th style="border: 1px solid black;">@item.Value</th>
+        </tr>
+    }
+</table>
+@await Html.PartialAsync("_TimeToBuy")
