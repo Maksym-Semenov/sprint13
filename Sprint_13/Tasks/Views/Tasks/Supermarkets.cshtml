@@ -1,0 +1,8 @@
+﻿<h2>Our Supermarkets</h2>
+<h3>There are @ViewBag.Markets.Count markets:</h3>
+<ul style="list-style: none; padding: 0px;">
+    @foreach (var item in ViewBag.Markets)
+    {
+        <li>@item</li>
+    }
+</ul>

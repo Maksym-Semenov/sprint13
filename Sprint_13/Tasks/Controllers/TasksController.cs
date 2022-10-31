@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 
 namespace Tasks.Controllers
 {
@@ -14,6 +15,7 @@ namespace Tasks.Controllers
         }
         public IActionResult Supermarkets()
         {
+            ViewBag.Markets = new List<string>() {"WellMart", "Silpo", "ATB", "Furshet", "Metro"};
             return View();
         }
         public IActionResult ShoppingList()
