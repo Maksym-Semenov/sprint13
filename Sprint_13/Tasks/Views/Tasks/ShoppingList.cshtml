@@ -1,4 +1,7 @@
 ﻿@model Dictionary<string, int>
+@{
+    ViewData["Title"] = "Spring Tasks";
+}
 <h3>Our Shopping list</h3>
 <table style="border: 1px solid black;">
     @foreach (var item in Model)

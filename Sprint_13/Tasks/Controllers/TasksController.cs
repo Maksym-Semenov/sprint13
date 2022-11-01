@@ -36,5 +36,10 @@ namespace Tasks.Controllers
         {
             return PartialView("_TimeToBuy");
         }
+
+        public IActionResult SprintTasks()
+        {
+            return View();
+        }
     }
 }
