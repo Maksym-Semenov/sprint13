@@ -5,7 +5,7 @@ namespace Tasks.Controllers
 {
     public class TasksController : Controller
     {
-        public IActionResult Greeting()
+        public IActionResult Greetings()
         {
             return View();
         }
