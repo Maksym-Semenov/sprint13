@@ -5,6 +5,17 @@ namespace Tasks.Controllers
 {
     public class TasksController : Controller
     {
+        public List<string> markets = new List<string>() {"WellMart", "Silpo", "ATB", "Furshet", "Metro"};
+
+        public Dictionary<string, int> shoppingList = new Dictionary<string, int>
+        {
+            ["Milk"] = 2,
+            ["Bread"] = 2,
+            ["Cake"] = 1,
+            ["Ice Cream"] = 5,
+            ["Cola"] = 10
+        };
+
         public IActionResult Greetings()
         {
             return View();
@@ -13,20 +24,14 @@ namespace Tasks.Controllers
         {
             return View();
         }
-        public IActionResult Supermarkets()
+        public IActionResult SuperMarkets()
         {
-            ViewBag.Markets = new List<string>() {"WellMart", "Silpo", "ATB", "Furshet", "Metro"};
+            ViewBag.Markets = markets;
             return View();
         }
         public IActionResult ShoppingList()
         {
-            Dictionary<string, int> dict = new Dictionary<string, int>();
-            dict.Add("Milk", 2);
-            dict.Add("Bread", 2);
-            dict.Add("Cake", 1);
-            dict.Add("Ice Cream", 5);
-            dict.Add("Cola", 10);
-            return View(dict);
+            return View(shoppingList);
         }
         public IActionResult ShoppingCart()
         {
@@ -34,7 +39,7 @@ namespace Tasks.Controllers
         }
         public IActionResult TimeToBuy()
         {
-            return PartialView("_TimeToBuy");
+            return PartialView();
         }
 
         public IActionResult SprintTasks()
