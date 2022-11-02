@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Tasks.Models;
 
 namespace Tasks.Controllers
 {
@@ -26,7 +27,7 @@ namespace Tasks.Controllers
             return View();
         }
 
-        public IActionResult Products()
+        public IActionResult ProductInfo()
         {
             return View();
         }
