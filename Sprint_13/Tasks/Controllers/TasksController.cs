@@ -12,26 +12,7 @@ namespace Tasks.Controllers
         }
         public IActionResult ProductInfo()
         {
-            List <Product> products = new List<Product>();
-            Product product1 = new Product("Bread", 10);
-            Product product2 = new Product("Milk", 11);
-            Product product3 = new Product("Cheese", 140);
-            Product product4 = new Product("Sausage", 110);
-            Product product5 = new Product("Potato", 7);
-            Product product6 = new Product("Banana", 23);
-            Product product7 = new Product("Tomato", 25);
-            Product product8 = new Product("Candy", 75);
-
-            products.Add(product1);
-            products.Add(product2);
-            products.Add(product3);
-            products.Add(product4);
-            products.Add(product5);
-            products.Add(product6);
-            products.Add(product7);
-            products.Add(product8);
-
-            return View(products);
+            return View();
         }
         public IActionResult Supermarkets()
         {
