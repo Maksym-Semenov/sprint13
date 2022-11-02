@@ -1,0 +1,4 @@
+﻿@inject Tasks.Services.ITimeService TimeService
+
+<h3>It's time to shopping!</h3>
+<p>@TimeService.GetTimeForTomorrow().ToShortDateString()</p>
