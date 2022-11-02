@@ -48,11 +48,6 @@ namespace Tasks.Controllers
         {
             ViewBag.Markets = markets;
             ViewBag.ShoppingList = shoppingList;
-            DateTime today = DateTime.Today;
-            ViewBag.Today = new DateTime(today.Year, today.Month, today.Day);
-            ViewBag.Tomorrow = new DateTime(today.Year, today.Month, today.Day).AddDays(1);
-            ViewBag.DayAfterTomorrow = new DateTime(today.Year, today.Month, today.Day).AddDays(2);
-
             return View();
         }
 
