@@ -7,9 +7,9 @@
     @foreach (var item in Model)
     {
         <tr style="border: 1px solid black;">
-            <th style="border: 1px solid black;">@item.Key</th>
-            <th style="border: 1px solid black;">@item.Value</th>
+            <td style="border: 1px solid black;">@item.Key</td>
+            <td style="border: 1px solid black;">@item.Value</td>
         </tr>
     }
 </table>
-@await Html.PartialAsync("_TimeToBuy")
+@await Html.PartialAsync("TimeToBuy")

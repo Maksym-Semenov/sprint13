@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "ShoppingCart";
+}
+
+<h1>Your shopping cart</h1>
+<form method="post">
+    <div>
+        <p><label for="fname">Input you fullname:</label><br /></p>
+        <input type="text" name="FullName" id="fname" value="Ostap Bender" />
+    </div>
+    <div>
+        <p><label for="addr">Input your address:</label><br /></p>
+        <input type="text" name="Address" id="addr" value="Rio de Zhmerinka" />
+    </div>
+    <br />
+    <div>
+        <select name="SuperMarket" id="market">
+            @foreach (var market in ViewBag.Markets)
+            {
+                <option value="@market">@market</option>
+            }
+        </select>
+    </div>
+    <br />
+    <div>
+        <input type="radio" name="ShoppingDate" id="todayrbutton" value="@ViewBag.Today" checked />
+        <label for="todayrbutton">@ViewBag.Today</label><br />
+        <input type="radio" name="ShoppingDate" id="tomorrowrbutton" value="@ViewBag.Tomorrow" />
+        <label for="tomorrowrbutton">@ViewBag.Tomorrow</label><br />
+        <input type="radio" name="ShoppingDate" id="aftertomorrowrbutton" value="@ViewBag.DayAfterTomorrow" />
+        <label for="aftertomorrowrbutton">@ViewBag.DayAfterTomorrow</label>
+    </div>
+    <br />
+    <div>
+        <select name="Product" id="product" multiple>
+            @foreach (var product in (Dictionary<string, int>)ViewBag.ShoppingList)
+            {
+                <option value="@product.Key">@product.Key</option>
+            }
+        </select>
+    </div>
+    <br />
+    <input type="submit" value="Send">
+</form>
+
